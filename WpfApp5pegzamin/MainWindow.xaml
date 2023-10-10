@@ -1,0 +1,62 @@
+﻿<Window x:Class="WpfApp5pegzamin.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp5pegzamin"
+        mc:Ignorable="d"
+        Title="Nadaj Przesyłkę 000000000" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <StackPanel>
+            <GroupBox Header="Rodzaj przesyłki">
+                <StackPanel>
+                <RadioButton GroupName="przesylka"
+                             x:Name="pocztowka">
+                    Pocztówka
+                </RadioButton>
+                    <RadioButton GroupName="przesylka"
+                                 x:Name="list"
+                                 IsChecked="True">
+                    List
+                </RadioButton>
+                    <RadioButton GroupName="przesylka"
+                                 x:Name="paczka">
+                        Paczka
+                    </RadioButton>
+                </StackPanel>
+            </GroupBox>
+            <Button Click="SprawdzCeneClick">Sprawdź cenę</Button>
+            <StackPanel Orientation="Horizontal">
+                <Image 
+                    x:Name="obraz"
+                    Source="../../../list.png"></Image>
+                <TextBlock 
+                    x:Name="cenatxt"
+                    FontWeight="Bold" FontSize="30">Cena 10 zł</TextBlock>
+            </StackPanel>
+        </StackPanel>
+        <GroupBox Grid.Column="1">
+        <StackPanel >
+                
+                <Label>Ulica z numerem</Label>
+            <TextBox></TextBox>
+            <Label>Kod pocztowy</Label>
+            <TextBox></TextBox>
+            <Label>Miasto</Label>
+            <TextBox></TextBox>
+        </StackPanel>
+        </GroupBox>
+        <Button Grid.Row="1" Grid.ColumnSpan="2">
+            Zatwierdź</Button>
+       
+
+    </Grid>
+</Window>
